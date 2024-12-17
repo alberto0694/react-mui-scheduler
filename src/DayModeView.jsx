@@ -329,6 +329,7 @@ DayModeView.propTypes = {
   options: PropTypes.object,
   searchResult: PropTypes.object,
   onDateChange: PropTypes.func.isRequired,
+  onRangeSelectedChange: PropTypes.func.isRequired,
   onTaskClick: PropTypes.func.isRequired,
   onCellClick: PropTypes.func.isRequired,
   onEventsChange: PropTypes.func.isRequired

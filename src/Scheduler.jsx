@@ -23,7 +23,7 @@ import WeekModeView from "./WeekModeView.jsx"
 import DayModeView from "./DayModeView.jsx"
 import TimeLineModeView from "./TimeLineModeView.jsx"
 import DateFnsLocaleContext from '../locales/dateFnsContext'
-import {ar, de, enAU, es, fr, ja, ko, ru, zhCN} from "date-fns/locale"
+import {ar, de, enAU, es, fr, ja, ko, ru, zhCN, ptBR } from "date-fns/locale"
 
 
 /**
@@ -43,7 +43,8 @@ function Scheduler(props) {
     onTaskClick,
     toolbarProps,
     onEventsChange,
-    onAlertCloseButtonClicked
+    onAlertCloseButtonClicked,
+    onRangeSelectedChange
   } = props
   const today = new Date()
   const theme = useTheme()
@@ -91,6 +92,7 @@ function Scheduler(props) {
   if (locale === 'ja') { dateFnsLocale = ja }
   if (locale === 'ru') { dateFnsLocale = ru }
   if (locale === 'zh') { dateFnsLocale = zhCN }
+  if (locale === 'br') { dateFnsLocale = ptBR }
 
   /**
    * @name getMonthHeader
@@ -470,7 +472,8 @@ function Scheduler(props) {
     selectedDate,
     dateFnsLocale,
     i18n.language,
-    startWeekOn
+    startWeekOn,
+    events
   ])
 
   useEffect(() => {
@@ -508,6 +511,7 @@ function Scheduler(props) {
           onModeChange={handleModeChange}
           onSearchResult={onSearchResult}
           onAlertCloseButtonClicked={onAlertCloseButtonClicked}
+          onRangeSelectedChange={onRangeSelectedChange}
         />
         <Grid
           container
@@ -604,6 +608,7 @@ Scheduler.propTypes = {
   onCellClick: PropTypes.func,
   onTaskClick: PropTypes.func,
   onAlertCloseButtonClicked: PropTypes.func,
+  onRangeSelectedChange: PropTypes.func,
 }
 
 Scheduler.defaultProps = {

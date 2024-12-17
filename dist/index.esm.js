@@ -33,21 +33,48 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import ScheduleIcon from '@mui/icons-material/Schedule';
-import { enAU, fr, ko, de, es, ar, ja, ru, zhCN } from 'date-fns/locale';
+import { enAU, fr, ko, de, es, ar, ja, ru, zhCN, ptBR } from 'date-fns/locale';
 
-var day$7 = "Day";
-var week$7 = "Week";
-var month$7 = "Month";
-var timeline$7 = "Timeline";
-var mon$7 = "Mon";
-var tue$7 = "Tue";
-var wed$7 = "Wed";
-var thu$7 = "Thu";
-var fri$7 = "Fri";
-var sat$7 = "Sat";
-var sun$7 = "Sun";
-var search$7 = "Search...";
+var day$8 = "Day";
+var week$8 = "Week";
+var month$8 = "Month";
+var timeline$8 = "Timeline";
+var mon$8 = "Mon";
+var tue$8 = "Tue";
+var wed$8 = "Wed";
+var thu$8 = "Thu";
+var fri$8 = "Fri";
+var sat$8 = "Sat";
+var sun$8 = "Sun";
+var search$8 = "Search...";
 var trEN = {
+	day: day$8,
+	week: week$8,
+	month: month$8,
+	timeline: timeline$8,
+	mon: mon$8,
+	tue: tue$8,
+	wed: wed$8,
+	thu: thu$8,
+	fri: fri$8,
+	sat: sat$8,
+	sun: sun$8,
+	search: search$8
+};
+
+var day$7 = "Jour";
+var week$7 = "Semaine";
+var month$7 = "Mois";
+var timeline$7 = "Chronologie";
+var mon$7 = "Lun";
+var tue$7 = "Mar";
+var wed$7 = "Mer";
+var thu$7 = "Jeu";
+var fri$7 = "Ven";
+var sat$7 = "Sam";
+var sun$7 = "Dim";
+var search$7 = "Chercher...";
+var trFR = {
 	day: day$7,
 	week: week$7,
 	month: month$7,
@@ -62,19 +89,19 @@ var trEN = {
 	search: search$7
 };
 
-var day$6 = "Jour";
-var week$6 = "Semaine";
-var month$6 = "Mois";
-var timeline$6 = "Chronologie";
-var mon$6 = "Lun";
-var tue$6 = "Mar";
-var wed$6 = "Mer";
-var thu$6 = "Jeu";
-var fri$6 = "Ven";
-var sat$6 = "Sam";
-var sun$6 = "Dim";
-var search$6 = "Chercher...";
-var trFR = {
+var day$6 = "낮";
+var week$6 = "주";
+var month$6 = "월";
+var timeline$6 = "타임라인";
+var mon$6 = "월";
+var tue$6 = "화요일";
+var wed$6 = "수";
+var thu$6 = "목";
+var fri$6 = "금";
+var sat$6 = "앉았다";
+var sun$6 = "해";
+var search$6 = "검색...";
+var trKO = {
 	day: day$6,
 	week: week$6,
 	month: month$6,
@@ -89,19 +116,19 @@ var trFR = {
 	search: search$6
 };
 
-var day$5 = "낮";
-var week$5 = "주";
-var month$5 = "월";
-var timeline$5 = "타임라인";
-var mon$5 = "월";
-var tue$5 = "화요일";
-var wed$5 = "수";
-var thu$5 = "목";
-var fri$5 = "금";
-var sat$5 = "앉았다";
-var sun$5 = "해";
-var search$5 = "검색...";
-var trKO = {
+var day$5 = "Tag";
+var week$5 = "Woche";
+var month$5 = "Monat";
+var timeline$5 = "Zeitleiste";
+var mon$5 = "Mo";
+var tue$5 = "Diens";
+var wed$5 = "Mitt";
+var thu$5 = "Donner";
+var fri$5 = "Frei";
+var sat$5 = "Sam";
+var sun$5 = "Sonn";
+var search$5 = "Suchen...";
+var trDE = {
 	day: day$5,
 	week: week$5,
 	month: month$5,
@@ -116,19 +143,19 @@ var trKO = {
 	search: search$5
 };
 
-var day$4 = "Tag";
-var week$4 = "Woche";
-var month$4 = "Monat";
-var timeline$4 = "Zeitleiste";
-var mon$4 = "Mo";
-var tue$4 = "Diens";
-var wed$4 = "Mitt";
-var thu$4 = "Donner";
-var fri$4 = "Frei";
-var sat$4 = "Sam";
-var sun$4 = "Sonn";
-var search$4 = "Suchen...";
-var trDE = {
+var day$4 = "Día";
+var week$4 = "Semana";
+var month$4 = "Mes";
+var timeline$4 = "Cronología";
+var mon$4 = "Lun";
+var tue$4 = "Mar";
+var wed$4 = "Mié";
+var thu$4 = "Jue";
+var fri$4 = "Vie";
+var sat$4 = "Sáb";
+var sun$4 = "Dom";
+var search$4 = "Buscar...";
+var trES = {
 	day: day$4,
 	week: week$4,
 	month: month$4,
@@ -143,19 +170,19 @@ var trDE = {
 	search: search$4
 };
 
-var day$3 = "Día";
-var week$3 = "Semana";
-var month$3 = "Mes";
-var timeline$3 = "Cronología";
-var mon$3 = "Lun";
-var tue$3 = "Mar";
-var wed$3 = "Mié";
-var thu$3 = "Jue";
-var fri$3 = "Vie";
-var sat$3 = "Sáb";
-var sun$3 = "Dom";
-var search$3 = "Buscar...";
-var trES = {
+var day$3 = "يوم";
+var week$3 = "أسبوع";
+var month$3 = "شهر";
+var timeline$3 = "الجدول الزمني";
+var mon$3 = "الإثنين";
+var tue$3 = "الثلاثاء";
+var wed$3 = "تزوج";
+var thu$3 = "خميس";
+var fri$3 = "الجمعة";
+var sat$3 = "قعد";
+var sun$3 = "شمس";
+var search$3 = "بحث";
+var trAR = {
 	day: day$3,
 	week: week$3,
 	month: month$3,
@@ -170,19 +197,19 @@ var trES = {
 	search: search$3
 };
 
-var day$2 = "يوم";
-var week$2 = "أسبوع";
-var month$2 = "شهر";
-var timeline$2 = "الجدول الزمني";
-var mon$2 = "الإثنين";
-var tue$2 = "الثلاثاء";
-var wed$2 = "تزوج";
-var thu$2 = "خميس";
-var fri$2 = "الجمعة";
-var sat$2 = "قعد";
-var sun$2 = "شمس";
-var search$2 = "بحث";
-var trAR = {
+var day$2 = "日";
+var week$2 = "週";
+var month$2 = "月";
+var timeline$2 = "年表";
+var mon$2 = "月曜日";
+var tue$2 = "3月";
+var wed$2 = "海";
+var thu$2 = "ゲーム";
+var fri$2 = "金";
+var sat$2 = "土";
+var sun$2 = "太陽";
+var search$2 = "探す...";
+var trJA = {
 	day: day$2,
 	week: week$2,
 	month: month$2,
@@ -197,19 +224,19 @@ var trAR = {
 	search: search$2
 };
 
-var day$1 = "日";
-var week$1 = "週";
+var day$1 = "天";
+var week$1 = "星期";
 var month$1 = "月";
 var timeline$1 = "年表";
-var mon$1 = "月曜日";
-var tue$1 = "3月";
+var mon$1 = "星期一";
+var tue$1 = "三月";
 var wed$1 = "海";
-var thu$1 = "ゲーム";
-var fri$1 = "金";
-var sat$1 = "土";
-var sun$1 = "太陽";
-var search$1 = "探す...";
-var trJA = {
+var thu$1 = "游戏";
+var fri$1 = "周五";
+var sat$1 = "星期六";
+var sun$1 = "太阳";
+var search$1 = "寻找...";
+var trZH = {
 	day: day$1,
 	week: week$1,
 	month: month$1,
@@ -224,19 +251,19 @@ var trJA = {
 	search: search$1
 };
 
-var day = "天";
-var week = "星期";
-var month = "月";
-var timeline = "年表";
-var mon = "星期一";
-var tue = "三月";
-var wed = "海";
-var thu = "游戏";
-var fri = "周五";
-var sat = "星期六";
-var sun = "太阳";
-var search = "寻找...";
-var trZH = {
+var day = "Dia";
+var week = "Semana";
+var month = "Mês";
+var timeline = "Linha do Tempo";
+var mon = "Seg";
+var tue = "Ter";
+var wed = "Qua";
+var thu = "Qui";
+var fri = "Sex";
+var sat = "Sab";
+var sun = "Dom";
+var search = "Buscar...";
+var trBR = {
 	day: day,
 	week: week,
 	month: month,
@@ -272,6 +299,9 @@ var resources = {
   },
   ja: {
     common: trJA
+  },
+  br: {
+    common: trBR
   },
   zh: {
     common: trZH
@@ -423,6 +453,7 @@ function SchedulerToolbar(props) {
       toolbarProps = props.toolbarProps,
       onModeChange = props.onModeChange,
       onDateChange = props.onDateChange,
+      onRangeSelectedChange = props.onRangeSelectedChange,
       onSearchResult = props.onSearchResult,
       onAlertCloseButtonClicked = props.onAlertCloseButtonClicked;
   var theme = useTheme();
@@ -535,6 +566,7 @@ function SchedulerToolbar(props) {
     }
 
     var newDate = method(selectedDate, options);
+    onRangeSelectedChange && onRangeSelectedChange(new Date(newDate));
     setDaysInMonth(getDaysInMonth(newDate));
     setSelectedDate(newDate);
   };
@@ -591,7 +623,8 @@ function SchedulerToolbar(props) {
     }
   }, commonIconButtonProps, {
     onClick: function onClick() {
-      return handleChangeDate(sub);
+      console.log('passei aqui no node_modules', sub);
+      handleChangeDate(sub);
     }
   }), /*#__PURE__*/React.createElement(ChevronLeftIcon, null)), /*#__PURE__*/React.createElement(Button, {
     size: "small",
@@ -749,7 +782,7 @@ function SchedulerToolbar(props) {
   })), /*#__PURE__*/React.createElement(Typography, {
     variant: "body2"
   }, "Settings"))), /*#__PURE__*/React.createElement(Collapse, {
-    in: alertProps === null || alertProps === void 0 ? void 0 : alertProps.open
+    "in": alertProps === null || alertProps === void 0 ? void 0 : alertProps.open
   }, /*#__PURE__*/React.createElement(Alert, {
     color: alertProps === null || alertProps === void 0 ? void 0 : alertProps.color,
     severity: alertProps === null || alertProps === void 0 ? void 0 : alertProps.severity,
@@ -816,7 +849,8 @@ function EventItem(props) {
   }, /*#__PURE__*/React.createElement(Typography, {
     variant: "body2",
     sx: {
-      fontSize: 11
+      fontSize: 11,
+      color: '#fff'
     }
   }, event === null || event === void 0 ? void 0 : event.label)));
 }
@@ -1454,6 +1488,7 @@ WeekModeView.propTypes = {
   options: PropTypes.object,
   searchResult: PropTypes.object,
   onDateChange: PropTypes.func.isRequired,
+  onRangeSelectedChange: PropTypes.func.isRequired,
   onTaskClick: PropTypes.func.isRequired,
   onCellClick: PropTypes.func.isRequired,
   onEventsChange: PropTypes.func.isRequired
@@ -1816,6 +1851,7 @@ DayModeView.propTypes = {
   options: PropTypes.object,
   searchResult: PropTypes.object,
   onDateChange: PropTypes.func.isRequired,
+  onRangeSelectedChange: PropTypes.func.isRequired,
   onTaskClick: PropTypes.func.isRequired,
   onCellClick: PropTypes.func.isRequired,
   onEventsChange: PropTypes.func.isRequired
@@ -1931,6 +1967,7 @@ TimeLineModeView.propTypes = {
   options: PropTypes.object,
   searchResult: PropTypes.object,
   onDateChange: PropTypes.func.isRequired,
+  onRangeSelectedChange: PropTypes.func.isRequired,
   onTaskClick: PropTypes.func.isRequired,
   onCellClick: PropTypes.func.isRequired,
   onEventsChange: PropTypes.func.isRequired
@@ -1957,7 +1994,8 @@ function Scheduler(props) {
       onTaskClick = props.onTaskClick,
       toolbarProps = props.toolbarProps,
       onEventsChange = props.onEventsChange,
-      onAlertCloseButtonClicked = props.onAlertCloseButtonClicked;
+      onAlertCloseButtonClicked = props.onAlertCloseButtonClicked,
+      onRangeSelectedChange = props.onRangeSelectedChange;
   var today = new Date();
   useTheme();
 
@@ -2057,6 +2095,10 @@ function Scheduler(props) {
 
   if (locale === 'zh') {
     dateFnsLocale = zhCN;
+  }
+
+  if (locale === 'br') {
+    dateFnsLocale = ptBR;
   }
   /**
    * @name getMonthHeader
@@ -2497,7 +2539,7 @@ function Scheduler(props) {
       }));
     } // eslint-disable-next-line
 
-  }, [mode, weekDays, daysInMonth, selectedDay, selectedDate, dateFnsLocale, i18n.language, startWeekOn]);
+  }, [mode, weekDays, daysInMonth, selectedDay, selectedDate, dateFnsLocale, i18n.language, startWeekOn, events]);
   useEffect(function () {
     if (locale !== i18n.language) {
       //localStorage.getItem('i18nextLng')
@@ -2536,14 +2578,15 @@ function Scheduler(props) {
     onDateChange: handleDateChange,
     onModeChange: handleModeChange,
     onSearchResult: onSearchResult,
-    onAlertCloseButtonClicked: onAlertCloseButtonClicked
+    onAlertCloseButtonClicked: onAlertCloseButtonClicked,
+    onRangeSelectedChange: onRangeSelectedChange
   }), /*#__PURE__*/React.createElement(Grid, {
     container: true,
     spacing: 0,
     alignItems: "center",
     justifyContent: "start"
   }, isMonthMode && /*#__PURE__*/React.createElement(TransitionMode, {
-    in: true
+    "in": true
   }, /*#__PURE__*/React.createElement(Grid, {
     item: true,
     xs: 12
@@ -2560,7 +2603,7 @@ function Scheduler(props) {
     onDateChange: handleDateChange,
     onEventsChange: handleEventsChange
   }))), isWeekMode && /*#__PURE__*/React.createElement(TransitionMode, {
-    in: true
+    "in": true
   }, /*#__PURE__*/React.createElement(Grid, {
     item: true,
     xs: 12
@@ -2577,7 +2620,7 @@ function Scheduler(props) {
     onDateChange: handleDateChange,
     onEventsChange: handleEventsChange
   }))), isDayMode && /*#__PURE__*/React.createElement(TransitionMode, {
-    in: true
+    "in": true
   }, /*#__PURE__*/React.createElement(Grid, {
     item: true,
     xs: 12
@@ -2594,7 +2637,7 @@ function Scheduler(props) {
     onDateChange: handleDateChange,
     onEventsChange: handleEventsChange
   })))), isTimelineMode && /*#__PURE__*/React.createElement(TransitionMode, {
-    in: true
+    "in": true
   }, /*#__PURE__*/React.createElement(Grid, {
     container: true,
     spacing: 2,
@@ -2625,7 +2668,8 @@ Scheduler.propTypes = {
   onEventsChange: PropTypes.func,
   onCellClick: PropTypes.func,
   onTaskClick: PropTypes.func,
-  onAlertCloseButtonClicked: PropTypes.func
+  onAlertCloseButtonClicked: PropTypes.func,
+  onRangeSelectedChange: PropTypes.func
 };
 Scheduler.defaultProps = {
   locale: 'en',

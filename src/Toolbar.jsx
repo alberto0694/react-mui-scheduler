@@ -36,6 +36,7 @@ function SchedulerToolbar (props) {
     toolbarProps,
     onModeChange,
     onDateChange,
+    onRangeSelectedChange,
     onSearchResult,
     onAlertCloseButtonClicked
   } = props
@@ -111,8 +112,9 @@ function SchedulerToolbar (props) {
       options = { days: 1 }  
     }
     let newDate = method(selectedDate, options)
+    onRangeSelectedChange && onRangeSelectedChange(new Date(newDate))
     setDaysInMonth(getDaysInMonth(newDate))
-    setSelectedDate(newDate)
+    setSelectedDate(newDate)    
   }
   
   const handleCloseAlert = (e) => {
@@ -162,7 +164,10 @@ function SchedulerToolbar (props) {
               <IconButton
                 sx={{  ml: 0, mr: -.1 }}
                 {...commonIconButtonProps}
-                onClick={() => handleChangeDate(sub)}
+                onClick={() => {
+                  console.log('passei aqui no node_modules', sub)
+                  handleChangeDate(sub)
+                }}
               >
                 <ChevronLeftIcon />
               </IconButton>

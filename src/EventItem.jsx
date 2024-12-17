@@ -28,7 +28,7 @@ function EventItem(props) {
         <Typography variant="caption" sx={{fontSize: 8}}>
           {event?.startHour} - {event?.endHour}
         </Typography>*/}
-        <Typography variant="body2" sx={{fontSize: 11}}>
+        <Typography variant="body2" sx={{fontSize: 11, color: '#fff'}} >
           {event?.label}
         </Typography>
       </Box>
